@@ -14,12 +14,11 @@
 # 5 10 15 20  25 30
 # 6 12 18 24  30 36
 
-r = int(input("Введите число n строк: "))
-c = int(input("Введите число m столбцов: "))
+r = int(input("Введите число  строк: "))
+c = int(input("Введите число  столбцов: "))
 def print_operation_table(operation, num_rows = r, num_columns = c):
     a = [[operation(i, j) for j in range(1, num_columns + 1)] for i in range(1, num_rows + 1)]
     for i in a:
         print(*[f"{x:>1}" for x in i])
 
 print_operation_table(lambda x, y: x * y)
-  
